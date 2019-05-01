@@ -7,7 +7,17 @@
 |fix:| BugFix
 |doc:| Documentation
 
-|[feat]| feat // A new feature
+|[feat]| 新增功能 // A new feature
+|[fix]| 修复问题 // A bug fix
+|[docs]| 修改文档 // Documentation only changes
+|[style]| 代码规范 // Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+|[refactor]| 代码重构 // A code change that neither fixes a bug nor adds a feature
+|[perf]| 优化功能 // A code change that improves performance
+|[test]| 测试功能 // Adding missing tests or correcting existing tests
+|[build]| 修改工程或库配置 // Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+|[ci]| 修改持续集成配置 // Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+|[chore]| 其他修改 // Other changes that don't modify src or test files
+|[revert]| 回滚版本 // Reverts a previous commit
 
 commit {
     :tada: test
