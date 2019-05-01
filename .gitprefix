@@ -7,6 +7,8 @@
 |fix:| BugFix
 |doc:| Documentation
 
+|[feat]| feat // A new feature
+
 commit {
     :tada: test
 
