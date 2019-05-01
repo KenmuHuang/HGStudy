@@ -4,9 +4,6 @@
 :books:   Documentation
 
 /* string prefix */
-|fix:| BugFix
-|doc:| Documentation
-
 |[feat]| 新增功能 // A new feature
 |[fix]| 修复问题 // A bug fix
 |[docs]| 修改文档 // Documentation only changes
@@ -21,24 +18,8 @@
 
 commit {
     :tada: test
-
-    test {
-        |aaa| test
-    }
-    ...test
 }
-
 
 merge {
     :art: test
-    > test
-}
-
-tag {
-    :+1: test
-}
-
-test {
-    :tada: test
-    |contruction| Working
 }
