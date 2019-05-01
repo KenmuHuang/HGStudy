@@ -6,6 +6,9 @@
 #ifndef HGSTUDY_BASICDATAANDEXPRESSION_H
 #define HGSTUDY_BASICDATAANDEXPRESSION_H
 
+#include <iostream>
+
+using namespace std;
 
 class BasicDataAndExpression {
 
