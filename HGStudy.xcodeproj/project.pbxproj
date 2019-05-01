@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		45076648302207076F3D23FE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45076F1FEA21D5CB52603C48 /* main.cpp */; };
+		45076974D08FCEC6AFDB22B1 /* BasicDataAndExpression.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45076DD8F91460AA9F5ACD41 /* BasicDataAndExpression.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		45076C71B028A5B0BC37697D /* HGStudy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HGStudy; sourceTree = BUILT_PRODUCTS_DIR; };
+		45076DD8F91460AA9F5ACD41 /* BasicDataAndExpression.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BasicDataAndExpression.mm; sourceTree = "<group>"; };
 		45076F1FEA21D5CB52603C48 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		45076FE2544CDE348F6D7934 /* BasicDataAndExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicDataAndExpression.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +51,8 @@
 		450761657C560FD417B26296 /* 第一章 基本数据与表达式 */ = {
 			isa = PBXGroup;
 			children = (
+				45076DD8F91460AA9F5ACD41 /* BasicDataAndExpression.mm */,
+				45076FE2544CDE348F6D7934 /* BasicDataAndExpression.h */,
 			);
 			path = "第一章 基本数据与表达式";
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45076648302207076F3D23FE /* main.cpp in Sources */,
+				45076974D08FCEC6AFDB22B1 /* BasicDataAndExpression.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
