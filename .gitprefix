@@ -1,8 +1,3 @@
-:bug:     BugFix
-:lock:    SecurityFix // Comment
-:recycle: Refactoring
-:books:   Documentation
-
 /* string prefix */
 |[feat]| 新增功能 // A new feature
 |[fix]| 修复问题 // A bug fix
@@ -15,11 +10,3 @@
 |[ci]| 修改持续集成配置 // Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
 |[chore]| 其他修改 // Other changes that don't modify src or test files
 |[revert]| 回滚版本 // Reverts a previous commit
-
-commit {
-    :tada: test
-}
-
-merge {
-    :art: test
-}
