@@ -7,9 +7,12 @@
 //
 
 #include <iostream>
+#include "BasicDataAndExpression.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    BasicDataAndExpression().testMethod();
+    BasicDataAndExpression::testStaticMethod(5.5);
+
     std::cout << "Hello, World!\n";
     return 0;
 
