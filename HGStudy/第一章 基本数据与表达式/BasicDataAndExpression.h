@@ -10,11 +10,21 @@
 
 using namespace std;
 
+enum colorType {
+    red = 0,
+    yellow,
+    blue,
+    white,
+    black,
+};
+
 class BasicDataAndExpression {
 public:
     void testMethod();
     void testBasicData();
     void testExpression();
+
+    void testEnum(int type);
     static void testStaticMethod(double r);
 };
 

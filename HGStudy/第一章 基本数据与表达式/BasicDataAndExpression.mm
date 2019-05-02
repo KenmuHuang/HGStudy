@@ -60,6 +60,39 @@ p = &j;
     cout << "\nl = " << l << endl; // l = 13
 }
 
+void BasicDataAndExpression::testEnum(int type) {
+    string colorDesc = "";
+    switch (type) {
+        case red: {
+            colorDesc = "红色";
+        }
+            break;
+        case yellow: {
+            colorDesc = "黄色";
+        }
+            break;
+        case blue: {
+            colorDesc = "蓝色";
+        }
+            break;
+        case white: {
+            colorDesc = "白色";
+        }
+            break;
+        case black: {
+            colorDesc = "黑色";
+        }
+            break;
+        default:
+            break;
+    }
+    if (colorDesc.length() > 0) { // length 也可用 size
+        cout << "\n颜色 = " << colorDesc << "，type = " << type << endl;
+    } else {
+        cout << "\n非法颜色" << endl;
+    }
+}
+
 void BasicDataAndExpression::testStaticMethod(double r) {
     double girth, area;
     const double PI = 3.1415;
