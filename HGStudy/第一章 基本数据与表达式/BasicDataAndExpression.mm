@@ -26,10 +26,10 @@ void BasicDataAndExpression::testBasicData() {
 }
 
 void BasicDataAndExpression::testExpression() {
-int i = 10, j = 12;
-int *p = &i; // 定义「指针对象」，左 * 右 &
-*p = j; // 赋值可以用 *p = j; 或 p = &j; 不能用 p = j；「值类型变量的值」不能赋值给「引用类型，对象变量指向地址」
-p = &j;
+    int i = 10, j = 12;
+    int *p = &i; // 定义「指针对象」，左 * 右 &
+    *p = j; // 赋值可以用 *p = j; 或 p = &j; 不能用 p = j；「值类型变量的值」不能赋值给「引用类型，对象变量指向地址」
+    p = &j;
     cout << "i = " << i << endl; // i = 12；指针操作导致 i 和 j 指向地址的实际引用的值一样
     cout << "p = " << p << endl; // p = 0x7ffeefbff5a0；「指针对象」指向地址
     cout << "*p = " << *p << endl; // *p = 12；「指针对象」指向地址 -> 实际引用的值
