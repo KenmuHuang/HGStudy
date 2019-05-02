@@ -17,7 +17,7 @@ void BasicDataAndExpression::testBasicData() {
     // 不是关键字：If, Static, go, integer
     int _integer = 0xaa;
     cout << "_integer = " << _integer << endl;
-    char If = 'e'; // 能编译，但值为最后的字符 'e'
+    char If = 'name'; // 能编译会警告，但值为最后的字符 'e'
     cout << "If = " << If << endl;
     If = 'n'; // 正常字符
     cout << "If = " << If << endl;
