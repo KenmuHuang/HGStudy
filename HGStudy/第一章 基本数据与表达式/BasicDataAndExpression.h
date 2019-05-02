@@ -13,6 +13,7 @@ using namespace std;
 class BasicDataAndExpression {
 public:
     void testMethod();
+    void testBasicData();
     static void testStaticMethod(double r);
 };
 

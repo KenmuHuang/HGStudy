@@ -10,9 +10,11 @@
 #include "BasicDataAndExpression.h"
 
 int main(int argc, const char * argv[]) {
-    BasicDataAndExpression().testMethod();
+    BasicDataAndExpression obj = BasicDataAndExpression();
+    obj.testBasicData();
+    obj.testMethod();
     BasicDataAndExpression::testStaticMethod(5.5);
-    BasicDataAndExpression().testStaticMethod(6.0);
+    obj.testStaticMethod(6.0);
 
     std::cout << "Hello, World!\n";
     return 0;
