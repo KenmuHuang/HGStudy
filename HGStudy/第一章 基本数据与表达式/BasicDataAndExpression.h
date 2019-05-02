@@ -14,6 +14,7 @@ class BasicDataAndExpression {
 public:
     void testMethod();
     void testBasicData();
+    void testExpression();
     static void testStaticMethod(double r);
 };
 

@@ -7,7 +7,7 @@
 
 void BasicDataAndExpression::testMethod() {
     double r = 0.0;
-    cout << "Please input radius:\n";
+    cout << "\nPlease input radius:\n";
     cin >> r;
     this->testStaticMethod(r); // BasicDataAndExpression::testStaticMethod(r);
 }
@@ -25,6 +25,41 @@ void BasicDataAndExpression::testBasicData() {
     cout << "If = " << If << endl;
 }
 
+void BasicDataAndExpression::testExpression() {
+int i = 10, j = 12;
+int *p = &i; // 定义「指针对象」，左 * 右 &
+*p = j; // 赋值可以用 *p = j; 或 p = &j; 不能用 p = j；「值类型变量的值」不能赋值给「引用类型，对象变量指向地址」
+p = &j;
+    cout << "i = " << i << endl; // i = 12；指针操作导致 i 和 j 指向地址的实际引用的值一样
+    cout << "p = " << p << endl; // p = 0x7ffeefbff5a0；「指针对象」指向地址
+    cout << "*p = " << *p << endl; // *p = 12；「指针对象」指向地址 -> 实际引用的值
+    cout << "&*p = " << &*p << endl; // &*p = 0x7ffeefbff5a0；「指针对象」指向地址 -> 实际引用的值 -> 指向地址
+    cout << "*&*p = " << *&*p << endl; // *&*p = 12；「指针对象」指向地址 -> 实际引用的值 -> 指向地址 -> 实际引用的值
+
+    int a = 5, b = 3, t;
+    int &ra = a; // 定义「指针对象」，左 &
+    int &rb = b;
+    cout << "\n&ra = " << &ra << endl; // &ra = 0x7ffeefbff594
+    cout << "&rb = " << &rb << endl; // &rb = 0x7ffeefbff590
+    cout << "*&ra = " << *&ra << endl; // *&ra = 5
+    cout << "*&rb = " << *&rb << endl; // *&rb = 3
+    t = ra;
+    ra = rb;
+    rb = t;
+    cout << "中间变量转换后\r&ra = " << &ra << endl;
+    cout << "&rb = " << &rb << endl;
+    cout << "*&ra = " << *&ra << endl; // *&ra = 3
+    cout << "*&rb = " << *&rb << endl; // *&rb = 5
+    cout << "ra = " << ra << endl; // ra = 3
+    cout << "rb = " << rb << endl; // rb = 5
+
+    int k = i+++j; // i++ + j，先执行 i + j，再执行 i++；这时 k = 24、i = 13、j = 12
+    cout << "\nk = " << k << endl; // k = 24
+
+    int l = ra > rb ? ra : i < k ? i : k; // 相当于 ra > rb ? ra : (i < k ? i : k);
+    cout << "\nl = " << l << endl; // l = 13
+}
+
 void BasicDataAndExpression::testStaticMethod(double r) {
     double girth, area;
     const double PI = 3.1415;
@@ -32,5 +67,5 @@ void BasicDataAndExpression::testStaticMethod(double r) {
     area = PI * r * r;
     cout << "radius = " << r << endl;
     cout << "girth = " << girth << endl;
-    cout << "area = " << area << "\r\n" << endl;
+    cout << "area = " << area << "\n" << endl;
 }

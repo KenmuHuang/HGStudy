@@ -10,8 +10,10 @@
 #include "BasicDataAndExpression.h"
 
 int main(int argc, const char * argv[]) {
+    // 第一章 基本数据与表达式
     BasicDataAndExpression obj = BasicDataAndExpression();
     obj.testBasicData();
+    obj.testExpression();
     obj.testMethod();
     BasicDataAndExpression::testStaticMethod(5.5);
     obj.testStaticMethod(6.0);
