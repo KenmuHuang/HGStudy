@@ -12,6 +12,7 @@
 int main(int argc, const char * argv[]) {
     BasicDataAndExpression().testMethod();
     BasicDataAndExpression::testStaticMethod(5.5);
+    BasicDataAndExpression().testStaticMethod(6.0);
 
     std::cout << "Hello, World!\n";
     return 0;
