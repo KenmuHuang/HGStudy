@@ -8,9 +8,9 @@
 
 #include <iostream>
 #include "BasicDataAndExpression.h"
+#include "ProgramControlStructure.h"
 
-int main(int argc, const char * argv[]) {
-    // 第一章 基本数据与表达式
+void testBasicDataAndExpression() {
     BasicDataAndExpression obj = BasicDataAndExpression();
     obj.testBasicData();
     obj.testExpression();
@@ -22,8 +22,22 @@ int main(int argc, const char * argv[]) {
     obj.testMethod();
     BasicDataAndExpression::testStaticMethod(5.5);
     obj.testStaticMethod(6.0);
+}
+
+void testProgramControlStructure() {
+    ProgramControlStructure obj = ProgramControlStructure();
+    obj.testIf();
+}
+
+int main(int argc, const char * argv[]) {
+    // 第一章 基本数据与表达式
+//    testBasicDataAndExpression();
+
+    // 第二章  程序控制结构
+    testProgramControlStructure();
 
     std::cout << "Hello, World!\n";
     return 0;
 
 }
+
