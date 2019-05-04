@@ -25,6 +25,7 @@ public:
     void testExpression();
     void testEnum(int type);
     void testPrint();
+    void testPointTypeConvert();
     static void testStaticMethod(double r);
 
 private:

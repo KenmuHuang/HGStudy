@@ -131,6 +131,18 @@ void BasicDataAndExpression::testPrint() {
     printf("%d = '%c', %d = '%c'\n", k, k, l, l); // 101 = 'e', 65 = 'A'
 }
 
+void BasicDataAndExpression::testPointTypeConvert() {
+    printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
+    int a = 65;
+    int *ip;
+    void *vp = &a;
+    cout << *(int *)vp << endl; // 65
+    cout << *(char *)vp << endl; // A
+    ip = (int *)vp;
+    cout << ip << endl; // 0x7ffeefbff5a4
+    cout << *ip << endl; // 65
+}
+
 void BasicDataAndExpression::testStaticMethod(double r) {
     printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
 

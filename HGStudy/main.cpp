@@ -17,6 +17,7 @@ int main(int argc, const char * argv[]) {
     obj.testEnum(blue);
     obj.testEnum(10);
     obj.testPrint();
+    obj.testPointTypeConvert();
     obj.testMethod();
     BasicDataAndExpression::testStaticMethod(5.5);
     obj.testStaticMethod(6.0);
