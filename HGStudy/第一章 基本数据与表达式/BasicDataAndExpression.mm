@@ -30,55 +30,29 @@ void BasicDataAndExpression::testBasicData() {
 }
 
 void BasicDataAndExpression::testExpression() {
-    printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
+    printf("---------- 测试函数名 %s ----------\n表达式：逻辑、赋值、条件、逗号\n", __FUNCTION__);
 
-    int i = 10, j = 12;
-    int *p = &i; // 定义「指向整型对象的指针，可以存放一个整型变量的地址」，左 * 右 &；* 表示「间址运算符、指针运算符」、& 表示「取址运算符」
-    *p = j; // 间址操作，赋值可以用 *p = j 或 p = &j; 不能用 p = j，因为 j 不是「int *对象」，也不能 p 不是「int 对象」
-    p = &j;
-    cout << "i = " << i << endl; // i = 12；指针操作导致 i 和 j 指向地址的实际引用的值一样
-    cout << "p = " << p << endl; // p = 0x7ffeefbff5a0；「指针对象」指向地址
-    cout << "*p = " << *p << endl; // *p = 12；「指针对象」指向地址 -> 实际引用的值
-    cout << "&*p = " << &*p << endl; // &*p = 0x7ffeefbff5a0；「指针对象」指向地址 -> 实际引用的值 -> 指向地址
-    cout << "*&*p = " << *&*p << endl; // *&*p = 12；「指针对象」指向地址 -> 实际引用的值 -> 指向地址 -> 实际引用的值
-
-    int a = 5, b = 3, t;
-    int &ra = a; // 引用，取址操作；ra 是 a 的别名
-    int &rb = b;
-    cout << "\n&ra = " << &ra << endl; // &ra = 0x7ffeefbff594
-    cout << "&rb = " << &rb << endl; // &rb = 0x7ffeefbff590
-    cout << "*&ra = " << *&ra << endl; // *&ra = 5
-    cout << "*&rb = " << *&rb << endl; // *&rb = 3
-    t = ra; // 相当于 t = *&ra 操作属于「交换指针所指对象的值」。另外一种 int *p1, *p2, *p; p = p1; 操作属于「交换指针值」
-    ra = rb;
-    rb = t;
-    cout << "中间变量转换后\r&ra = " << &ra << endl;
-    cout << "&rb = " << &rb << endl;
-    cout << "*&ra = " << *&ra << endl; // *&ra = 3
-    cout << "*&rb = " << *&rb << endl; // *&rb = 5
-    cout << "ra = " << ra << endl; // ra = 3
-    cout << "rb = " << rb << endl; // rb = 5
-
-    int ****p4, ***p3, **p2, *p1, k = 3;
-    p4 = &p3; // 指向指针的指针
-    p3 = &p2;
-    p2 = &p1;
-    p1 = &k;
-    // p4 = &p2; 编译错误，因为 &p2 指向的 p3 只是「int ***对象」不是「int ****对象」
-    cout << ****p4 << endl; // 3
-
-    const int m = 23;
-    const int *p5 = &m; // 必须加 const 常量标识符
-    cout << *p5 << endl; // 23
-    p5 = &k; // 可以指向一个变量
-    // *p5 = 6; 编译错误，只读常量
-    cout << *p5 << endl; // 3
-
-    k = i+++j; // i++ + j，先执行 i + j，再执行 i++；这时 k = 24、i = 13、j = 12
+    int i = 12;
+    int j = 12;
+    int k = i+++j; // i++ + j，先执行 i + j，再执行 i++；这时 k = 24、i = 13、j = 12
     cout << "\nk = " << k << endl; // k = 24
 
+    int ra = 3;
+    int rb = 5;
     int l = ra > rb ? ra : i < k ? i : k; // 相当于 ra > rb ? ra : (i < k ? i : k);
     cout << "\nl = " << l << endl; // l = 13
+    cout << oct << "\n8进制：l = " << l; // l = 13
+    cout << dec << "\n10进制：l = " << l << ends; // l = 15；ends 表示输出一个空格符并清空流
+    cout << hex << "\n16进制：l = " << l << endl; // l = d；endl 表示输出一个新行符并清空流
+
+    i = j = 0;
+    l = (++i && ++j) ? 666 : 999; // 都先执行 ++，再比较
+    printf("l = %d, i = %d, j = %d", l, i, j); // l = 666, i = 1, j = 1
+    l = (i-- && --j) ? 666 : 999; // 先执行 i 和 --j 比较，再执行 i--
+    printf("\nl = %d, i = %d, j = %d\n", l, i, j); // l = 999, i = 0, j = 0
+
+    i = ((j = 3 * 5, j * 2), j + 16); // 逗号表达式：j = 15 和 15 * 2 比较取最大值，这时为 30；然后 30 与 15 + 16 比较取最大值，这时 i = 31
+    printf("\ni = %d, j = %d\n", i, j);
 }
 
 void BasicDataAndExpression::testEnum(int type) {
@@ -138,6 +112,66 @@ void BasicDataAndExpression::testPrint() {
     printf("%d = '%c', %d = '%c'\n", k, k, l, l); // 101 = 'e', 65 = 'A'
 }
 
+void BasicDataAndExpression::testPoint() {
+    printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
+
+    int i = 10, j = 12;
+    int *p = &i; // 定义「指向整型对象的指针，可以存放一个整型变量的地址」，左 * 右 &；* 表示「间址运算符、指针运算符」、& 表示「取址运算符」
+    *p = j; // 间址操作，赋值可以用 *p = j 或 p = &j; 不能用 p = j，因为 j 不是「int *对象」，也不能 p 不是「int 对象」
+    p = &j;
+    cout << "i = " << i << endl; // i = 12；指针操作导致 i 和 j 指向地址的实际引用的值一样
+    cout << "p = " << p << endl; // p = 0x7ffeefbff5a0；「指针对象」指向地址
+    cout << "*p = " << *p << endl; // *p = 12；「指针对象」指向地址 -> 实际引用的值
+    cout << "&*p = " << &*p << endl; // &*p = 0x7ffeefbff5a0；「指针对象」指向地址 -> 实际引用的值 -> 指向地址
+    cout << "*&*p = " << *&*p << endl; // *&*p = 12；「指针对象」指向地址 -> 实际引用的值 -> 指向地址 -> 实际引用的值
+
+    int a = 5, b = 3, t;
+    int &ra = a; // 引用，取址操作；ra 是 a 的别名
+    int &rb = b;
+    cout << "\n&ra = " << &ra << endl; // &ra = 0x7ffeefbff594
+    cout << "&rb = " << &rb << endl; // &rb = 0x7ffeefbff590
+    cout << "*&ra = " << *&ra << endl; // *&ra = 5
+    cout << "*&rb = " << *&rb << endl; // *&rb = 3
+    t = ra; // 相当于 t = *&ra 操作属于「交换指针所指对象的值」。另外一种 int *p1, *p2, *p; p = p1; 操作属于「交换指针值」
+    ra = rb;
+    rb = t;
+    cout << "中间变量转换后\r&ra = " << &ra << endl;
+    cout << "&rb = " << &rb << endl;
+    cout << "*&ra = " << *&ra << endl; // *&ra = 3
+    cout << "*&rb = " << *&rb << endl; // *&rb = 5
+    cout << "ra = " << ra << endl; // ra = 3
+    cout << "rb = " << rb << endl; // rb = 5
+
+    int ****p4, ***p3, **p2, *p1, k = 3;
+    p4 = &p3; // 指向指针的指针
+    p3 = &p2;
+    p2 = &p1;
+    p1 = &k;
+    // p4 = &p2; 编译错误，因为 &p2 指向的 p3 只是「int ***对象」不是「int ****对象」
+    cout << ****p4 << endl; // 3
+
+    const int m = 23;
+    const int *p5 = &m; // 指针常量：必须加 const 常量标识符，而且只能在定义时初始化，指针本身和所指对象的值在定义后都限制为只读
+    cout << *p5 << endl; // 23
+    p5 = &k; // 可以指向一个变量；*p5 和 k 都表示同一个对象，但有不同的访问特性
+    // *p5 = 6; 编译错误，只读常量
+    cout << *p5 << endl; // 3
+
+    const int mixVal = 1;
+    int maxVal;
+    const int * const pMin = &mixVal;
+    const int * const pMax = &maxVal;
+    // pMin = &maxVal; 编译错误，指针常量，因为指针本身也是只读的
+    // *pMin = 100; 编译错误，指针常量，因为值也是只读的
+    maxVal = 100;
+    printf("pMin = %d, pMax = %d\n", *pMin, *pMax);
+
+    const int &rMaxVal = maxVal; // 常引用：只能在定义时初始化，只读
+    // rMaxVal = 666; 编译错误，常引用，因为只读
+    maxVal = 666;
+    printf("rMaxVal = %d\n", rMaxVal);
+}
+
 void BasicDataAndExpression::testPointTypeConvert() {
     printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
     int a = 65;
@@ -164,7 +198,7 @@ void BasicDataAndExpression::testStaticMethod(double r) {
 
 #pragma mark - Private Method
 void BasicDataAndExpression::compare(char firstChar, char secondChar) {
-    bool flag = firstChar < secondChar;
+    bool flag = firstChar < secondChar; // 逻辑表达式：求值过程，非0值为逻辑真
     printf("'%c' < '%c' 吗？%s, '%c' = %d, '%c' = %d \n", firstChar, secondChar, (flag ? "是" : "否"), firstChar, firstChar, secondChar, secondChar);
     // cout << "'a' < 'b' 吗？" << (flag ? "是" : "否") << endl;
 }
