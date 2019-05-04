@@ -70,6 +70,9 @@ void BasicDataAndExpression::testExpression() {
     const int m = 23;
     const int *p5 = &m; // 必须加 const 常量标识符
     cout << *p5 << endl; // 23
+    p5 = &k; // 可以指向一个变量
+    // *p5 = 6; 编译错误，只读常量
+    cout << *p5 << endl; // 3
 
     k = i+++j; // i++ + j，先执行 i + j，再执行 i++；这时 k = 24、i = 13、j = 12
     cout << "\nk = " << k << endl; // k = 24
