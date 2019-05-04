@@ -15,6 +15,7 @@ class ProgramControlStructure {
 public:
     void testIf();
     void testSwitch();
+    void testWhile();
 };
 
 

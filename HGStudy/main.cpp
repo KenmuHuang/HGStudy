@@ -26,8 +26,9 @@ void testBasicDataAndExpression() {
 
 void testProgramControlStructure() {
     ProgramControlStructure obj = ProgramControlStructure();
-    obj.testIf();
-    obj.testSwitch();
+//    obj.testIf();
+//    obj.testSwitch();
+    obj.testWhile();
 }
 
 int main(int argc, const char * argv[]) {
