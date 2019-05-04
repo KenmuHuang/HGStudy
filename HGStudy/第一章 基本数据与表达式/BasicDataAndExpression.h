@@ -10,7 +10,7 @@
 
 using namespace std;
 
-enum colorType {
+enum ColorType {
     red = 0,
     yellow,
     blue,

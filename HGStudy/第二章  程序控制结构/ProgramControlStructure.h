@@ -7,12 +7,14 @@
 #define HGSTUDY_PROGRAMCONTROLSTRUCTURE_H
 
 #include <iostream>
+#include<iomanip>
 
 using namespace std;
 
 class ProgramControlStructure {
 public:
     void testIf();
+    void testSwitch();
 };
 
 
