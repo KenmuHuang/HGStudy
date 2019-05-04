@@ -16,6 +16,7 @@ public:
     void testIf();
     void testSwitch();
     void testWhile();
+    void testFor();
 };
 
 

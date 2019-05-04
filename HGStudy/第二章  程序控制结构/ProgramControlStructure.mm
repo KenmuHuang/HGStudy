@@ -52,6 +52,8 @@ void ProgramControlStructure::testIf() {
 }
 
 void ProgramControlStructure::testSwitch() {
+    printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
+
     enum MonthOfYear {
         January = 1,
         February,
@@ -122,6 +124,8 @@ void ProgramControlStructure::testSwitch() {
 }
 
 void ProgramControlStructure::testWhile() {
+    printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
+
     cout << "计算若干个浮点数的平均值，以输入字母为结束" << endl;
     int valuesProcessed = 0;
     double valueSum = 0;
@@ -140,4 +144,27 @@ void ProgramControlStructure::testWhile() {
 //    do {
 //        // 至少执行一次
 //    } while (value);
+}
+
+void ProgramControlStructure::testFor() {
+    printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
+
+    cout << "求菲波那契数列的前 n 项\nn = ";
+    int n, i;
+    int a1 = 0;
+    int a2 = 1;
+    cin >> n;
+    cout << a1 << "  " << a2 << "  ";
+    for (i = 2; i <= n / 2; i ++) {
+        a1 = a1 + a2;
+        a2 = a2 + a1;
+        cout << a1 << "  "<< a2 << "  ";
+        if (i % 5 == 0) {
+            cout << endl;
+        }
+    }
+    if (n > (i - 1) * 2) {
+        cout << a1 + a2 << endl;
+    }
+    cout << endl;
 }

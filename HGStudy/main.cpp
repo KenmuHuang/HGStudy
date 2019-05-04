@@ -28,7 +28,8 @@ void testProgramControlStructure() {
     ProgramControlStructure obj = ProgramControlStructure();
 //    obj.testIf();
 //    obj.testSwitch();
-    obj.testWhile();
+//    obj.testWhile();
+    obj.testFor();
 }
 
 int main(int argc, const char * argv[]) {
