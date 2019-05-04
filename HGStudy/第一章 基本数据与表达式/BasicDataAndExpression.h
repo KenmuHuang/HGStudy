@@ -23,9 +23,12 @@ public:
     void testMethod();
     void testBasicData();
     void testExpression();
-
     void testEnum(int type);
+    void testPrint();
     static void testStaticMethod(double r);
+
+private:
+    void compare(char firstChar, char secondChar);
 };
 
 
