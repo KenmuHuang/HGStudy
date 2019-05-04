@@ -9,6 +9,7 @@
 #include <iostream>
 #include "BasicDataAndExpression.h"
 #include "ProgramControlStructure.h"
+#include "Function.h"
 
 void testBasicDataAndExpression() {
     BasicDataAndExpression obj = BasicDataAndExpression();
@@ -26,10 +27,15 @@ void testBasicDataAndExpression() {
 
 void testProgramControlStructure() {
     ProgramControlStructure obj = ProgramControlStructure();
-//    obj.testIf();
-//    obj.testSwitch();
-//    obj.testWhile();
+    obj.testIf();
+    obj.testSwitch();
+    obj.testWhile();
     obj.testFor();
+}
+
+void testFunction() {
+    Function obj = Function();
+    obj.testVolume(5.0, 8.5);
 }
 
 int main(int argc, const char * argv[]) {
@@ -37,7 +43,10 @@ int main(int argc, const char * argv[]) {
 //    testBasicDataAndExpression();
 
     // 第二章  程序控制结构
-    testProgramControlStructure();
+//    testProgramControlStructure();
+
+    // 第三章  函数
+    testFunction();
 
     std::cout << "Hello, World!\n";
     return 0;

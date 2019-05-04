@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		450763EBFBE53C0234007655 /* ProgramControlStructure.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4507629F871F35F4F84FBA74 /* ProgramControlStructure.mm */; };
 		45076648302207076F3D23FE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45076F1FEA21D5CB52603C48 /* main.cpp */; };
+		450766C59A7BE6DCF084685D /* Function.mm in Sources */ = {isa = PBXBuildFile; fileRef = 450768F6FBD11DCFAED25A26 /* Function.mm */; };
 		45076974D08FCEC6AFDB22B1 /* BasicDataAndExpression.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45076DD8F91460AA9F5ACD41 /* BasicDataAndExpression.mm */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		450760C87888CB4AC2A9AA70 /* Function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Function.h; sourceTree = "<group>"; };
 		4507629F871F35F4F84FBA74 /* ProgramControlStructure.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ProgramControlStructure.mm; sourceTree = "<group>"; };
+		450768F6FBD11DCFAED25A26 /* Function.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Function.mm; sourceTree = "<group>"; };
 		45076C10B24D1E54FBEF97E6 /* ProgramControlStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramControlStructure.h; sourceTree = "<group>"; };
 		45076C71B028A5B0BC37697D /* HGStudy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HGStudy; sourceTree = BUILT_PRODUCTS_DIR; };
 		45076DD8F91460AA9F5ACD41 /* BasicDataAndExpression.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BasicDataAndExpression.mm; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 		4507626F4BD9AC0EBD0A5486 /* 第三章  函数 */ = {
 			isa = PBXGroup;
 			children = (
+				450768F6FBD11DCFAED25A26 /* Function.mm */,
+				450760C87888CB4AC2A9AA70 /* Function.h */,
 			);
 			path = "第三章  函数";
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				45076648302207076F3D23FE /* main.cpp in Sources */,
 				45076974D08FCEC6AFDB22B1 /* BasicDataAndExpression.mm in Sources */,
 				450763EBFBE53C0234007655 /* ProgramControlStructure.mm in Sources */,
+				450766C59A7BE6DCF084685D /* Function.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

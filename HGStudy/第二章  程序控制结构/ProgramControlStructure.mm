@@ -84,7 +84,7 @@ void ProgramControlStructure::testSwitch() {
             // 1、3、5、7、8、10、12 月份
             dayInMonth = 31;
         }
-            break;
+            break; // break, continue, goto
         case April:
         case June:
         case September:
@@ -165,6 +165,7 @@ void ProgramControlStructure::testFor() {
     }
     if (n > (i - 1) * 2) {
         cout << a1 + a2 << endl;
+    } else {
+        cout << endl;
     }
-    cout << endl;
 }
