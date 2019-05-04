@@ -43,7 +43,7 @@ void BasicDataAndExpression::testExpression() {
     cout << "*&*p = " << *&*p << endl; // *&*p = 12；「指针对象」指向地址 -> 实际引用的值 -> 指向地址 -> 实际引用的值
 
     int a = 5, b = 3, t;
-    int &ra = a; // 取址操作
+    int &ra = a; // 引用，取址操作；ra 是 a 的别名
     int &rb = b;
     cout << "\n&ra = " << &ra << endl; // &ra = 0x7ffeefbff594
     cout << "&rb = " << &rb << endl; // &rb = 0x7ffeefbff590
@@ -65,7 +65,11 @@ void BasicDataAndExpression::testExpression() {
     p2 = &p1;
     p1 = &k;
     // p4 = &p2; 编译错误，因为 &p2 指向的 p3 只是「int ***对象」不是「int ****对象」
-    cout << ****p4 << endl ; // 3
+    cout << ****p4 << endl; // 3
+
+    const int m = 23;
+    const int *p5 = &m; // 必须加 const 常量标识符
+    cout << *p5 << endl; // 23
 
     k = i+++j; // i++ + j，先执行 i + j，再执行 i++；这时 k = 24、i = 13、j = 12
     cout << "\nk = " << k << endl; // k = 24
