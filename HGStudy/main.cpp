@@ -10,6 +10,8 @@
 #include "BasicDataAndExpression.h"
 #include "ProgramControlStructure.h"
 #include "Function.h"
+#include "Array.h"
+#include "SetAndStructure.h"
 
 void testBasicDataAndExpression() {
     BasicDataAndExpression obj = BasicDataAndExpression();
@@ -38,6 +40,15 @@ void testFunction() {
     obj.testVolume(5.0, 8.5);
 }
 
+void testArray() {
+    Array obj = Array();
+}
+
+void testSetAndStructure() {
+    SetAndStructure obj = SetAndStructure();
+    obj.testBitOperation();
+}
+
 int main(int argc, const char * argv[]) {
     // 第一章 基本数据与表达式
 //    testBasicDataAndExpression();
@@ -46,7 +57,13 @@ int main(int argc, const char * argv[]) {
 //    testProgramControlStructure();
 
     // 第三章  函数
-    testFunction();
+//    testFunction();
+
+    // 第四章  数组
+//    testArray();
+
+    // 第五章  集合与结构
+    testSetAndStructure();
 
     std::cout << "Hello, World!\n";
     return 0;

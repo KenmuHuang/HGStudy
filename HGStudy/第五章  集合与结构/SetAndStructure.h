@@ -6,9 +6,16 @@
 #ifndef HGSTUDY_SETANDSTRUCTURE_H
 #define HGSTUDY_SETANDSTRUCTURE_H
 
+#include <iostream>
+
+using namespace std;
 
 class SetAndStructure {
+public:
+    void testBitOperation();
 
+private:
+    void bitDisplay(unsigned value);
 };
 
 
