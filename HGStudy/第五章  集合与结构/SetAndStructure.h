@@ -10,12 +10,19 @@
 
 using namespace std;
 
+struct node {
+    int data;
+    node *next;
+};
+
 class SetAndStructure {
 public:
     void testBitOperation();
+    void testStructure();
 
 private:
     void bitDisplay(unsigned value);
+    node *creatList();
 };
 
 

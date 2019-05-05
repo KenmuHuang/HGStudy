@@ -46,7 +46,8 @@ void testArray() {
 
 void testSetAndStructure() {
     SetAndStructure obj = SetAndStructure();
-    obj.testBitOperation();
+//    obj.testBitOperation();
+    obj.testStructure();
 }
 
 int main(int argc, const char * argv[]) {

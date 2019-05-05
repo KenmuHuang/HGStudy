@@ -40,6 +40,19 @@ void SetAndStructure::testBitOperation() {
     bitDisplay(~i); // 按位取反：单目运算。对操作数按位做逻辑非；负数在计算机中用补码表示。11110101是-11的补码
 }
 
+void SetAndStructure::testStructure() {
+    printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
+
+    cout << "请输入链表数据" << endl;
+    node *head = creatList();
+    while (head != NULL) {
+        cout << head->data << "  ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+#pragma mark - Private Method
 void SetAndStructure::bitDisplay(unsigned value) {
     unsigned bitMask = 1<<31; //掩码，最高位置1
     cout << value << " = ";
@@ -51,4 +64,26 @@ void SetAndStructure::bitDisplay(unsigned value) {
         }
     }
     cout << "\n" << endl;
+}
+
+node *SetAndStructure::creatList() {
+    node *head = NULL;
+    node *s, *p;
+    s = new node;
+    cin >> s->data;
+    while (s->data != 0) {
+        if (head == NULL) {
+            head = s;
+        } else {
+            p->next = s;
+        }
+
+        p = s;
+        s = new node;
+        cin >> s->data;
+    }
+    p->next = NULL;
+    delete s;
+
+    return (head);
 }
