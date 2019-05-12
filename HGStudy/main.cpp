@@ -12,6 +12,7 @@
 #include "Function.h"
 #include "Array.h"
 #include "SetAndStructure.h"
+#include "Exam.h"
 
 void testBasicDataAndExpression() {
     BasicDataAndExpression obj = BasicDataAndExpression();
@@ -50,6 +51,13 @@ void testSetAndStructure() {
     obj.testStructure();
 }
 
+void testExam() {
+    Exam obj = Exam();
+    obj.testStructure();
+    obj.testCalculation();
+    obj.testAverage();
+}
+
 int main(int argc, const char * argv[]) {
     // 第一章 基本数据与表达式
 //    testBasicDataAndExpression();
@@ -64,7 +72,10 @@ int main(int argc, const char * argv[]) {
 //    testArray();
 
     // 第五章  集合与结构
-    testSetAndStructure();
+//    testSetAndStructure();
+
+    // 实验  建立控制台应用程序
+    testExam();
 
     std::cout << "Hello, World!\n";
     return 0;
