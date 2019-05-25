@@ -44,8 +44,14 @@ void testFunction() {
 //    obj.testTransferValue(10); // 由于三个参数的重载函数有默认值，所以会导致编译器无法判断调用哪个
 
     int a = 5, b = 10;
-    bool isSwapSuccess = obj.testTransferPointer(&a, &b);
-    printf("指针参数交换%s\n", (isSwapSuccess ? "成功" : "失败"));
+    int *i, *j;
+    i = &a;
+    j = &b;
+    bool isSwapSuccess = obj.testTransferPointer(i, &*j); // 或者 obj.testTransferPointer(&a, &b);
+    printf("指针参数交换会改变实参？%s\n", (isSwapSuccess ? "是" : "否"));
+
+    isSwapSuccess = obj.testTransferReference(*i, *j); // 或者同样 a 和 b 参数对应的 obj.testTransferReference(a, b);
+    printf("引用参数交换会改变实参？%s\n", (isSwapSuccess ? "是" : "否"));
 }
 
 void testArray() {

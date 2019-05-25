@@ -27,16 +27,33 @@ bool Function::testTransferPointer(int *a, int *b) {
     printf("---------- 测试函数名 %s（指针参数） ----------\n", __FUNCTION__);
 
     int temp = *a;
-    this->swap(a, b);
+    this->swapPointer(a, b);
 
     return temp != *a;
 }
 
+bool Function::testTransferReference(int &a, int &b) {
+    printf("---------- 测试函数名 %s（引用参数） ----------\n", __FUNCTION__);
+
+    int temp = a;
+    this->swapReference(a, b);
+
+    return temp != a;
+}
+
 #pragma mark - Private Method
-void Function::swap(int *a, int *b) {
+void Function::swapPointer(int *a, int *b) {
     printf("交换前 a = %d, b = %d\n", *a, *b);
     int temp = *a;
     *a = *b;
     *b = temp;
     printf("交换后 a = %d, b = %d\n", *a, *b);
+}
+
+void Function::swapReference(int &a, int &b) {
+    printf("交换前 a = %d, b = %d\n", a, b);
+    int temp = a;
+    a = b;
+    b = temp;
+    printf("交换后 a = %d, b = %d\n", a, b);
 }
