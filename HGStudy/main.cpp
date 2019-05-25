@@ -39,6 +39,9 @@ void testProgramControlStructure() {
 void testFunction() {
     Function obj = Function();
     obj.testVolume(5.0, 8.5);
+    obj.testTransferValue(10, 20);
+    obj.testTransferValue(10, 20, 30);
+//    obj.testTransferValue(10); // 由于三个参数的重载函数有默认值，所以会导致编译器无法判断调用哪个
 }
 
 void testArray() {
@@ -66,7 +69,7 @@ int main(int argc, const char * argv[]) {
 //    testProgramControlStructure();
 
     // 第三章  函数
-//    testFunction();
+    testFunction();
 
     // 第四章  数组
 //    testArray();
@@ -75,7 +78,7 @@ int main(int argc, const char * argv[]) {
 //    testSetAndStructure();
 
     // 实验  建立控制台应用程序
-    testExam();
+//    testExam();
 
     std::cout << "Hello, World!\n";
     return 0;
