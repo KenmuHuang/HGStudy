@@ -16,6 +16,10 @@ public:
     void testVolume(double radius, double height);
     void testTransferValue(int val);
     void testTransferValue(int val, int secondVal = 2, int thirdVal = 3); ///< 默认参数必须连续放最后
+    bool testTransferPointer(int *a, int *b);
+
+private:
+    void swap(int *a, int *b);
 };
 
 

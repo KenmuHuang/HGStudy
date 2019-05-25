@@ -22,3 +22,21 @@ void Function::testTransferValue(int val, int secondVal, int thirdVal) {
 
     printf("val = %d, secondVal = %d, thirdVal = %d, val + secondVal + thirdVal = %d\n", val, secondVal, thirdVal, val + secondVal + thirdVal);
 }
+
+bool Function::testTransferPointer(int *a, int *b) {
+    printf("---------- 测试函数名 %s（指针参数） ----------\n", __FUNCTION__);
+
+    int temp = *a;
+    this->swap(a, b);
+
+    return temp != *a;
+}
+
+#pragma mark - Private Method
+void Function::swap(int *a, int *b) {
+    printf("交换前 a = %d, b = %d\n", *a, *b);
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+    printf("交换后 a = %d, b = %d\n", *a, *b);
+}

@@ -21,8 +21,8 @@ void testBasicDataAndExpression() {
     obj.testEnum(blue);
     obj.testEnum(10);
     obj.testPrint();
-    obj.testPoint();
-    obj.testPointTypeConvert();
+    obj.testPointer();
+    obj.testPointerTypeConvert();
     obj.testMethod();
     BasicDataAndExpression::testStaticMethod(5.5);
     obj.testStaticMethod(6.0);
@@ -42,6 +42,10 @@ void testFunction() {
     obj.testTransferValue(10, 20);
     obj.testTransferValue(10, 20, 30);
 //    obj.testTransferValue(10); // 由于三个参数的重载函数有默认值，所以会导致编译器无法判断调用哪个
+
+    int a = 5, b = 10;
+    bool isSwapSuccess = obj.testTransferPointer(&a, &b);
+    printf("指针参数交换%s\n", (isSwapSuccess ? "成功" : "失败"));
 }
 
 void testArray() {

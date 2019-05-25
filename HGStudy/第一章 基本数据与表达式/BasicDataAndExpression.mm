@@ -112,7 +112,7 @@ void BasicDataAndExpression::testPrint() {
     printf("%d = '%c', %d = '%c'\n", k, k, l, l); // 101 = 'e', 65 = 'A'
 }
 
-void BasicDataAndExpression::testPoint() {
+void BasicDataAndExpression::testPointer() {
     printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
 
     int i = 10, j = 12;
@@ -172,7 +172,7 @@ void BasicDataAndExpression::testPoint() {
     printf("rMaxVal = %d\n", rMaxVal);
 }
 
-void BasicDataAndExpression::testPointTypeConvert() {
+void BasicDataAndExpression::testPointerTypeConvert() {
     printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
     int a = 65;
     int *ip;
