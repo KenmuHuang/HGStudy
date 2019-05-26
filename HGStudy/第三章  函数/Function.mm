@@ -56,7 +56,13 @@ int &Function::testReturnReference(int &a, int &b) {
 long Function::testFunctionNesting(int a, int b) {
     printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
 
-    return (this->factorial(a) / (this->factorial(b) * this->factorial(a - b)));
+    return this->factorial(a) / (this->factorial(b) * this->factorial(a - b));
+}
+
+long Function::testFunctionRecursive(int a, int b) {
+    printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
+
+    return this->factorial(a) / (this->factorial(b) * this->factorial(a - b));
 }
 
 #pragma mark - Private Method
@@ -90,10 +96,18 @@ int &Function::maxReference(int &a, int &b) {
 }
 
 long Function::factorial(int val) {
-    long sum = 1;
-    for (int i = 1; i <= val; i++) {
-        sum *= i;
+    // 递归的写法
+    if (val == 0) {
+        return 1; // 递归终止
+    } else {
+        return val * factorial(val - 1); // 递归调用
     }
-    printf("%d 的阶乘 = %ld\n", val, sum);
-    return sum;
+
+    // 循环的写法
+//    long sum = 1;
+//    for (int i = 1; i <= val; i++) {
+//        sum *= i;
+//    }
+//    printf("%d 的阶乘 = %ld\n", val, sum);
+//    return sum;
 }

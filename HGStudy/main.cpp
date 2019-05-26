@@ -61,6 +61,8 @@ void testFunction() {
 
     long bin = obj.testFunctionNesting(10, 4); // 10 的阶乘 / (4 的阶乘 * （10 - 4）的阶乘) = 210
     printf("bin = %ld\n", bin);
+    bin = obj.testFunctionRecursive(10, 4); // 10 的阶乘 / (4 的阶乘 * （10 - 4）的阶乘) = 210
+    printf("bin = %ld\n", bin);
 }
 
 void testArray() {

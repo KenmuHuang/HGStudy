@@ -21,6 +21,7 @@ public:
     int *testReturnPointer(int *a, int *b);
     int &testReturnReference(int &a, int &b);
     long testFunctionNesting(int a, int b); ///<「函数嵌套」
+    long testFunctionRecursive(int a, int b); ///<「函数递归」
 
 private:
     void swapPointer(int *a, int *b);
