@@ -41,6 +41,12 @@ bool Function::testTransferReference(int &a, int &b) {
     return temp != a;
 }
 
+int *Function::testReturnPointer(int *a, int *b) {
+    printf("---------- 测试函数名 %s（函数的返回类型 - 指针） ----------\n", __FUNCTION__);
+
+    return this->maxPointer(a, b);
+}
+
 #pragma mark - Private Method
 void Function::swapPointer(int *a, int *b) {
     printf("交换前 a = %d, b = %d\n", *a, *b);
@@ -56,4 +62,10 @@ void Function::swapReference(int &a, int &b) {
     a = b;
     b = temp;
     printf("交换后 a = %d, b = %d\n", a, b);
+}
+
+int *Function::maxPointer(int *a, int *b) {
+    printf("*a = %d, *b = %d, a = %p, b = %p\n", *a, *b, a, b);
+    return *a > *b ? a : b;
+//    return nullptr; // nullptr 表示空指针，其中 ptr 是 pointer 的缩写
 }
