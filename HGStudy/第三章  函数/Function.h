@@ -20,12 +20,14 @@ public:
     bool testTransferReference(int &a, int &b); ///<「引用参数」相当于别名
     int *testReturnPointer(int *a, int *b);
     int &testReturnReference(int &a, int &b);
+    long testFunctionNesting(int a, int b); ///<「函数嵌套」
 
 private:
     void swapPointer(int *a, int *b);
     void swapReference(int &a, int &b);
     int *maxPointer(int *a, int *b);
     int &maxReference(int &a, int &b);
+    long factorial(int val); ///< 阶乘
 };
 
 

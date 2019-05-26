@@ -58,6 +58,9 @@ void testFunction() {
 
     int maxReference = obj.testReturnReference(a, b); // 指针地址跟 b 的不一样，新的指针地址
     printf("maxReference = %d, &maxReference = %p\n", maxReference, &maxReference); // maxReference = 10, &maxReference = 0x7ffeefbff54c
+
+    long bin = obj.testFunctionNesting(10, 4); // 10 的阶乘 / (4 的阶乘 * （10 - 4）的阶乘) = 210
+    printf("bin = %ld\n", bin);
 }
 
 void testArray() {

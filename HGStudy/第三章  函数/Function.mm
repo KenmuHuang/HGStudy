@@ -53,6 +53,12 @@ int &Function::testReturnReference(int &a, int &b) {
     return this->maxReference(a, b);
 }
 
+long Function::testFunctionNesting(int a, int b) {
+    printf("---------- 测试函数名 %s ----------\n", __FUNCTION__);
+
+    return (this->factorial(a) / (this->factorial(b) * this->factorial(a - b)));
+}
+
 #pragma mark - Private Method
 void Function::swapPointer(int *a, int *b) {
     printf("交换前 a = %d, b = %d\n", *a, *b);
@@ -81,4 +87,13 @@ int *Function::maxPointer(int *a, int *b) {
 int &Function::maxReference(int &a, int &b) {
     printf("a = %d, b = %d, &a = %p, &b = %p\n", a, b, &a, &b); // a = 5, b = 10, &a = 0x7ffeefbff574, &b = 0x7ffeefbff570
     return a > b ? a : b;
+}
+
+long Function::factorial(int val) {
+    long sum = 1;
+    for (int i = 1; i <= val; i++) {
+        sum *= i;
+    }
+    printf("%d 的阶乘 = %ld\n", val, sum);
+    return sum;
 }
