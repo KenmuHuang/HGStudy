@@ -47,6 +47,12 @@ int *Function::testReturnPointer(int *a, int *b) {
     return this->maxPointer(a, b);
 }
 
+int &Function::testReturnReference(int &a, int &b) {
+    printf("---------- 测试函数名 %s（函数的返回类型 - 引用） ----------\n", __FUNCTION__);
+
+    return this->maxReference(a, b);
+}
+
 #pragma mark - Private Method
 void Function::swapPointer(int *a, int *b) {
     printf("交换前 a = %d, b = %d\n", *a, *b);
@@ -65,7 +71,14 @@ void Function::swapReference(int &a, int &b) {
 }
 
 int *Function::maxPointer(int *a, int *b) {
-    printf("*a = %d, *b = %d, a = %p, b = %p\n", *a, *b, a, b);
+    printf("*a = %d, *b = %d, a = %p, b = %p\n", *a, *b, a, b); // *a = 5, *b = 10, a = 0x7ffeefbff574, b = 0x7ffeefbff570
     return *a > *b ? a : b;
+//    int temp = 11;
+//    return &temp; //< 不建议用局部变量，局部销毁可能导致异常？所以建议使用定义多一个结果参数，比如：int *result
 //    return nullptr; // nullptr 表示空指针，其中 ptr 是 pointer 的缩写
+}
+
+int &Function::maxReference(int &a, int &b) {
+    printf("a = %d, b = %d, &a = %p, &b = %p\n", a, b, &a, &b); // a = 5, b = 10, &a = 0x7ffeefbff574, &b = 0x7ffeefbff570
+    return a > b ? a : b;
 }

@@ -53,8 +53,11 @@ void testFunction() {
     isSwapSuccess = obj.testTransferReference(*i, *j); // 或者同样 a 和 b 参数对应的 obj.testTransferReference(a, b);
     printf("引用参数交换会改变实参？%s\n", (isSwapSuccess ? "是" : "否"));
 
-    int *max = obj.testReturnPointer(&a, &b);
-    printf("*max = %d, max = %p\n", *max, max);
+    int *maxPointer = obj.testReturnPointer(&a, &b); // 指针地址跟 b 的一样
+    printf("*maxPointer = %d, maxPointer = %p\n", *maxPointer, maxPointer); // *maxPointer = 10, maxPointer = 0x7ffeefbff570
+
+    int maxReference = obj.testReturnReference(a, b); // 指针地址跟 b 的不一样，新的指针地址
+    printf("maxReference = %d, &maxReference = %p\n", maxReference, &maxReference); // maxReference = 10, &maxReference = 0x7ffeefbff54c
 }
 
 void testArray() {
