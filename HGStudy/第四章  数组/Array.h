@@ -12,8 +12,9 @@ using namespace std;
 
 class Array {
 public:
-    void testDefinition();
-    void testPointArray();
+    void testDefinition(); ///< 测试数组定义
+    void testPointArray(); ///< 测试指针数组
+    void testMultiDimension(); ///< 测试多维数组
 };
 
 

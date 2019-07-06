@@ -80,3 +80,17 @@ void Array::testPointArray() {
         printf("pointArray[%d] = %p, *pointArray[%d] = %d\n", i, pointArray[i], i, *pointArray[i]); // 格式：pointArray[0] = 0x7ffeefbff3ac, *pointArray[0] = 10
     }
 }
+
+void Array::testMultiDimension() {
+    int a[2][3] = {{1, 2, 3}, {4, 5, 6}}; // 二维数组：2 行 3 列
+    int b[2][3] = {1, 2, 3, 4, 5, 6}; // 二维数组：2 行 3 列；等同上面
+    int c[][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9}; // 二维数组：3 行 3 列；第一维长度自动计算为 3；如果是 10 个元素，第一维长度自动计算为 4；不够的后面元素默认为 0
+    int d[][3] = {{1}, {4}, {7}};  // 二维数组：3 行 3 列；仅对第 0 列初始化赋值
+    int e[2][3][4] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}; // 三维数组：2 * 3 * 4 = 24 个元素；不够的后面元素默认为 0
+
+    printf("len of a = %d\n", int(sizeof(a) / sizeof(int))); // len of a = 6
+    printf("len of b = %d\n", int(sizeof(b) / sizeof(b[0][0]))); // len of b = 6
+    printf("len of c = %d\n", int(sizeof(c) / sizeof(c[0][0]))); // len of c = 9
+    printf("len of d = %d\n", int(sizeof(d) / sizeof(d[0][0]))); // len of d = 9
+    printf("len of e = %d\n", int(sizeof(e) / sizeof(e[0][0][0]))); // len of e = 24
+}

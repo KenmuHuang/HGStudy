@@ -69,6 +69,7 @@ void testArray() {
     Array obj = Array();
     obj.testDefinition();
     obj.testPointArray();
+    obj.testMultiDimension();
 }
 
 void testSetAndStructure() {
