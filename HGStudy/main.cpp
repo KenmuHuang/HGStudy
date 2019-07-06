@@ -67,6 +67,7 @@ void testFunction() {
 
 void testArray() {
     Array obj = Array();
+    obj.testDefinition();
 }
 
 void testSetAndStructure() {
@@ -90,10 +91,10 @@ int main(int argc, const char * argv[]) {
 //    testProgramControlStructure();
 
     // 第三章  函数
-    testFunction();
+//    testFunction();
 
     // 第四章  数组
-//    testArray();
+    testArray();
 
     // 第五章  集合与结构
 //    testSetAndStructure();

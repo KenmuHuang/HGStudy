@@ -6,9 +6,13 @@
 #ifndef HGSTUDY_ARRAY_H
 #define HGSTUDY_ARRAY_H
 
+#include <iostream>
+
+using namespace std;
 
 class Array {
-
+public:
+    void testDefinition();
 };
 
 
