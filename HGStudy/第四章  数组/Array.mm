@@ -15,10 +15,21 @@ void Array::testDefinition() {
         printf("%d 大于 %d，并且 %d 小于 %d\n", a[1], b[1], a[5], c[3]); // 3 大于 0，并且 0 小于 1
     }
 
-    printf("b = %p, b[1] address = %p\n", b, &b[1]); // b = 0x7ffeefbff380, b[1] address = 0x7ffeefbff384；b 指向第 1 个元素地址，每个元素为 int 类型占 4 位，所以打印为 380 和 384
+    // b == &b[0], *b == b[0]
+    // b + 1 == &b[1], *(b + 1) = b[1]
+    // b + i == &b[i], *(b + i) = b[i]
+    printf("b = %p, &b[1] = %p\n", b, &b[1]); // b = 0x7ffeefbff380, &b[1] = 0x7ffeefbff384；b 指向第 1 个元素地址（起始地址），每个元素为 int 类型占 4 字节，所以打印为 380 和 384
     for (int i = 0, len = sizeof(b) / sizeof(int); i < len; ++i) {
-        printf("b[%d] = %d\n", i, b[i]);
+        printf("b[%d] = %d, &b[%d] = %p\n", i, *(b + i), i, b + i);
     }
+
+    int *p;
+    p = b; // p = &b[0]
+    printf("*p = %d\n", *p); // *p = 1
+    p++; // p = &b[1]
+    printf("*(p++) = %d\n", *(p++)); // *(p++) = 2
+    p += 2; // p = &b[1 + 1 + 2]
+    printf("*p = %d, p = %p\n", *p, p); // *p = 0, p = 0x7ffeefbff390
 
 /*
     char *p1 = "name";
