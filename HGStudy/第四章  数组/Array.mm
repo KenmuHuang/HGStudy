@@ -8,11 +8,16 @@
 void Array::testDefinition() {
     const int count = 5;
     int a[count] = {1, 3, 5, 7, 9}; // 数组大小必须为常量；越界情况下：a[5] = 0，a[6] 开始为非正常值
-    int b[5] = {1};
-    int c[] = {1, 2, 3};// 数组大小由元素决定；越界情况下：a[3] = 1，a[6] 开始为非正常值
+    int b[5] = {1, 2}; // 除了第 1-2 元素外，剩下的 3 个元素默认为 0
+    int c[] = {1, 2, 3}; // 数组大小由元素决定；越界情况下：a[3] = 1，a[6] 开始为非正常值
 //    int d[5] = {1, 2, 3, 4, 5, 6, 7}; // 定义数组元素超过可容纳大小
     if (a[1] > b[1] && a[5] < c[3]) {
-        printf("%d 大于 %d，并且 %d 小于 %d\n", a[1], b[1], a[5], c[3]);
+        printf("%d 大于 %d，并且 %d 小于 %d\n", a[1], b[1], a[5], c[3]); // 3 大于 0，并且 0 小于 1
+    }
+
+    printf("b = %p, b[1] address = %p\n", b, &b[1]); // b = 0x7ffeefbff380, b[1] address = 0x7ffeefbff384；b 指向第 1 个元素地址，每个元素为 int 类型占 4 位，所以打印为 380 和 384
+    for (int i = 0, len = sizeof(b) / sizeof(int); i < len; ++i) {
+        printf("b[%d] = %d\n", i, b[i]);
     }
 
 /*
