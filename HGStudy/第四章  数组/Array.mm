@@ -20,7 +20,7 @@ void Array::testDefinition() {
     // b + i == &b[i], *(b + i) = b[i]
     printf("b = %p, &b[1] = %p\n", b, &b[1]); // b = 0x7ffeefbff380, &b[1] = 0x7ffeefbff384；b 指向第 1 个元素地址（起始地址），每个元素为 int 类型占 4 字节，所以打印为 380 和 384
     for (int i = 0, len = sizeof(b) / sizeof(int); i < len; ++i) {
-        printf("b[%d] = %d, &b[%d] = %p\n", i, *(b + i), i, b + i);
+        printf("b[%d] = %d, &b[%d] = %p\n", i, *(b + i), i, b + i); // 格式：b[0] = 1, &b[0] = 0x7ffeefbff380
     }
 
     int *p;
@@ -70,4 +70,13 @@ void Array::testDefinition() {
     double a4; double *r =&a4;
 
     int x=1; while(++x<7)cout<<x;*/
+}
+
+void Array::testPointArray() {
+    int normalArray[3] = {10, 20, 30};
+    int *pointArray[3];
+    for (int i = 0, len = sizeof(normalArray) / sizeof(int); i < len; ++i) {
+        pointArray[i] = &normalArray[i];
+        printf("pointArray[%d] = %p, *pointArray[%d] = %d\n", i, pointArray[i], i, *pointArray[i]); // 格式：pointArray[0] = 0x7ffeefbff3ac, *pointArray[0] = 10
+    }
 }

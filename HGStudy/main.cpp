@@ -68,6 +68,7 @@ void testFunction() {
 void testArray() {
     Array obj = Array();
     obj.testDefinition();
+    obj.testPointArray();
 }
 
 void testSetAndStructure() {

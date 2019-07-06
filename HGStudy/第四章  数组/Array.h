@@ -13,6 +13,7 @@ using namespace std;
 class Array {
 public:
     void testDefinition();
+    void testPointArray();
 };
 
 
