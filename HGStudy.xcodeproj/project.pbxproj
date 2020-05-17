@@ -20,6 +20,7 @@
 		45076AB6A91B4F1DA4D18E7D /* Template.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4507681AEA4D588CF45CE712 /* Template.mm */; };
 		45076B8054C630A90B27637D /* Array.mm in Sources */ = {isa = PBXBuildFile; fileRef = 450767D5F2ACECCB6C31E9DE /* Array.mm */; };
 		45076CCD9D82C0D6ED81551C /* Inherit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4507674BAD7F61BB40AC7E3C /* Inherit.mm */; };
+		45076F3CF7D50D260BC37C19 /* ExamOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45076EB1A82D2D234DC0D061 /* ExamOS.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,7 @@
 		4507629F871F35F4F84FBA74 /* ProgramControlStructure.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ProgramControlStructure.mm; sourceTree = "<group>"; };
 		450762C84585F6382A8171D1 /* SetAndStructure.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SetAndStructure.mm; sourceTree = "<group>"; };
 		450764889301FF8AAC86EA35 /* OperationOverride.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OperationOverride.mm; sourceTree = "<group>"; };
+		4507660A7198C8C39CC85522 /* ExamOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamOS.h; sourceTree = "<group>"; };
 		450766FAE9DE61D7AF4F4A64 /* Inherit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inherit.h; sourceTree = "<group>"; };
 		4507674BAD7F61BB40AC7E3C /* Inherit.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Inherit.mm; sourceTree = "<group>"; };
 		450767D5F2ACECCB6C31E9DE /* Array.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Array.mm; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		45076DB35A19135D75A821A4 /* VirtualFunctionAndPolymorphism.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VirtualFunctionAndPolymorphism.mm; sourceTree = "<group>"; };
 		45076DD8F91460AA9F5ACD41 /* BasicDataAndExpression.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BasicDataAndExpression.mm; sourceTree = "<group>"; };
 		45076E976C542A10771E6230 /* Exam.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Exam.mm; sourceTree = "<group>"; };
+		45076EB1A82D2D234DC0D061 /* ExamOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ExamOS.mm; sourceTree = "<group>"; };
 		45076ED8292B675B3EB646B5 /* SetAndStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetAndStructure.h; sourceTree = "<group>"; };
 		45076F1FEA21D5CB52603C48 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		45076FE2544CDE348F6D7934 /* BasicDataAndExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicDataAndExpression.h; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 			children = (
 				45076E976C542A10771E6230 /* Exam.mm */,
 				4507616A9B2088651E930176 /* Exam.h */,
+				45076EB1A82D2D234DC0D061 /* ExamOS.mm */,
+				4507660A7198C8C39CC85522 /* ExamOS.h */,
 			);
 			path = "实验  建立控制台应用程序";
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				45076AB6A91B4F1DA4D18E7D /* Template.mm in Sources */,
 				450765391E322F9C0CCC8613 /* InputOutputStream.mm in Sources */,
 				45076291AEAB0648555AFCD7 /* Exam.mm in Sources */,
+				45076F3CF7D50D260BC37C19 /* ExamOS.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

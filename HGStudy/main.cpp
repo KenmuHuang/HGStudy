@@ -13,6 +13,7 @@
 #include "Array.h"
 #include "SetAndStructure.h"
 #include "Exam.h"
+#include "ExamOS.h"
 
 void testBasicDataAndExpression() {
     BasicDataAndExpression obj = BasicDataAndExpression();
@@ -85,6 +86,11 @@ void testExam() {
     obj.testAverage();
 }
 
+void textExamOS() {
+    ExamOS obj = ExamOS();
+    obj.testBankOS();
+}
+
 int main(int argc, const char * argv[]) {
     // 第一章 基本数据与表达式
 //    testBasicDataAndExpression();
@@ -96,7 +102,7 @@ int main(int argc, const char * argv[]) {
 //    testFunction();
 
     // 第四章  数组
-    testArray();
+//    testArray();
 
     // 第五章  集合与结构
 //    testSetAndStructure();
@@ -104,7 +110,9 @@ int main(int argc, const char * argv[]) {
     // 实验  建立控制台应用程序
 //    testExam();
 
-    std::cout << "Hello, World!\n";
+    // 操作系统：银行家死锁避免算法模拟
+    textExamOS();
+
     return 0;
 
 }
