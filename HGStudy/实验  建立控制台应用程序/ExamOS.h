@@ -6,14 +6,15 @@
 #ifndef HGSTUDY_EXAMOS_H
 #define HGSTUDY_EXAMOS_H
 
-#include <iostream>
-
-using namespace std;
-
 class ExamOS {
 public:
     void testBankOS();
-};
 
+private:
+    void showInfo();
+    int changeData(int i);
+    int safe();
+    void request();
+};
 
 #endif //HGSTUDY_EXAMOS_H
